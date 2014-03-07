@@ -113,27 +113,27 @@ public class ApiStreaming extends Configured implements Tool {
 			if((!songid.equals("-1")) && year <= yearmax && yearmin <= year) { 
 				
 				// default values for the api keys
-				String enkey = "GXGVZDP19FKVQYUBO"; 
-				String lfmkey = "5b4535425418d2fc3baaa75713a59ede";
+				String enkey = "echonestkey1"; 
+				String lfmkey = "lastfmkey1";
 				// -------
 				
 				// shuffle the api keys according to the number of processed tracks
 				int nrecords = (int) context.getCounter("org.apache.hadoop.mapreduce.TaskCounter", "MAP_INPUT_RECORDS").getValue();
 				switch (nrecords % 5) {
-		            case 0:  enkey = "GXGVZDP19FKVQYUBO";
-		            		 lfmkey = "5b4535425418d2fc3baaa75713a59ede";
+		            case 0:  enkey = "echonestkey1";
+		            		 lfmkey = "lastfmkey1";
 		                     break;
-		            case 1:  enkey = "FNWIP5SE9FVLDXAJ4";
-		            		 lfmkey = "c8216859c5c4afe85b1feaec5ce81a3e";
+		            case 1:  enkey = "echonestkey2";
+		            		 lfmkey = "lastfmkey2";
 		                     break;
-		            case 2:  enkey = "E3I8H1GKBYXVD6ZAO";
-		            		 lfmkey = "2c907cc1c8b71e1013e147d4a392ef6a"; 
+		            case 2:  enkey = "echonestkey3";
+		            		 lfmkey = "lastfmkey3"; 
 		             		 break;
-		            case 3:  enkey = "ODRAS2OFYTG7AD6TJ";
-		            		 lfmkey = "f88c4a34093b5d83d47050fb2a42df0a"; 
+		            case 3:  enkey = "echonestkey4";
+		            		 lfmkey = "lastfmkey4"; 
 		                     break;
-		            case 4:  enkey = "OLWMM0V3YIZ0MV1SG";
-		            		 lfmkey = "1fad4549d1ffd6d1f866e540352af3f4"; 
+		            case 4:  enkey = "echonestkey5";
+		            		 lfmkey = "lastfmkey5"; 
 		                     break;
 		        }
 				// -------
